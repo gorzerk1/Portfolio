@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+body {
+    padding:0;
+    border: 0;
+    margin: 0;
+}
+
+.Navbar--body {
+    position: absolute;
+    height: 9vh;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    font-family: 'Secular One', sans-serif;
+    
+}
+.Navbar--container {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.Navbar--buttons {
+    color:white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:50px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    height: 100%;
+    width: 90%;
+    
+}
+.Navbar--buttons > div {
+    cursor: pointer;
+}
+.Navbar--logo {
+    width: 10%;
+    color:rgb(168, 168, 168);
+    font-size: 1.4rem;
+    font-weight:lighter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
