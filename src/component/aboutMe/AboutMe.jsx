@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import './aboutMe.css';
 
 function AboutMe() {
@@ -6,22 +6,21 @@ function AboutMe() {
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
 
-  const checkVisibility = () => {
+  const checkVisibility = useCallback(() => {
     const rect = ref.current.getBoundingClientRect();
     const isVisible = rect.top <= window.innerHeight * 0.6;
     if(isVisible && !isAnimated) {
       setIsVisible(true);
       setIsAnimated(true);
     }
-  };
+  }, [isAnimated]);
 
   useEffect(() => {
     window.addEventListener('scroll', checkVisibility);
     return () => {
       window.removeEventListener('scroll', checkVisibility);
     };
-  }, [isAnimated]);
-
+  }, [checkVisibility]);
 
   return (
     <div className="aboutMe--body">
