@@ -32,7 +32,12 @@ body {
     align-items: center;
 }
 
-.portfolio--title > img {
+.portfolio--title > :nth-child(3) {
+    width: 30px;
+    height: 30px;
+}
+
+.portfolio--title > :nth-child(1) {
     width: 30px;
     height: 30px;
 }
@@ -54,12 +59,27 @@ body {
     gap:1%;
 }
 
-.portfolio--grid > div {
-}
-
 .portfolio-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border:1p solid green;
+    transition: transform 2s;
+    backface-visibility: hidden;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.arrow-left,
+.arrow-right {
+    transition: transform 2s;
+}
+
+.arrow-move.arrow-left {
+    transform: translateX(-200px);
+}
+
+.arrow-move.arrow-right {
+    transform: translateX(200px);
 }

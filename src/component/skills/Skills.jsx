@@ -1,10 +1,30 @@
+import { useEffect, useRef, useState } from 'react';
 import './skills.css';
 
 function Skills() {
+  const ref = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+  const [isAnimated, setIsAnimated] = useState(false);
+
+  const checkVisibility = () => {
+    const rect = ref.current.getBoundingClientRect();
+    const isVisible = rect.top <= window.innerHeight * 0.6;
+    if(isVisible && !isAnimated) {
+      setIsVisible(true);
+      setIsAnimated(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkVisibility);
+    return () => {
+      window.removeEventListener('scroll', checkVisibility);
+    };
+  }, [isAnimated]);
 
   return (
     <div className="skills--body">
-      <div className='skills-container'>
+      <div className={`skills-container ${isVisible ? 'animate-back' : ''}`} ref={ref}>
         <div className='skills--box'>
           <img src="../../react.png" alt="" />
           <div>React</div>
