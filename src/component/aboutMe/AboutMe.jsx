@@ -20,7 +20,7 @@ function AboutMe() {
         </p>
         <div className='aboutMe--information'>
           <div className='aboutMe--smallContainer'>
-            <div>NAME</div>
+            <div>Name</div>
             <div>Dima Dubinin</div>
           </div>
           <div className='aboutMe--smallContainer'>
