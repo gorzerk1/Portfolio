@@ -187,8 +187,6 @@ span {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
-    
     }
 }
 @media (max-width:770px) {
@@ -325,6 +323,17 @@ span {
 }
 
 @media (max-width:450px) {
+    .Main--leftSide , .Main--rightSide {
+        border:1px solid red;
+    }
+    .Main--leftSide {
+        height:50%;
+    }
+    .Main--rightSide {
+        height: 60%;
+        display: flex;
+        align-items: flex-end;
+    }
     .Main--aboutMe {
         height: 100vh;
     }
