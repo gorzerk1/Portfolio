@@ -333,17 +333,16 @@ span {
         align-items: flex-end;
     }
     .Main--aboutMe {
-        height: 100vh;
+        min-height: 120vh;
     }
-    .Main--circle {
-        margin-right:100px
-    }
+
     .Main--circle {
         position: relative;
         width: 224px;  
         height: 324.8px;  
         border: 3.2px solid white; 
         border-radius: 160px; 
+        margin-bottom:10px;
     }
     
     .Main--circle > img {
