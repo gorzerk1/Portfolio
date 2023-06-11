@@ -15,25 +15,27 @@ function Main() {
           </div>
         </div>
         <div className='Main--rightSide'>
-          <img src="../../my_picture.jpg" alt="" />
-          <div className='Main--circle'></div>
-          <div className='Main--talent'>
-            <div className='Main--detail'>
-              <img src="../../plus.png" alt="" />
-              <div>ATTENCTION TO DETAIL</div>
-              <div className='Main--sideBackground'></div>
-            </div>
-            <div className='Main--detail'>
-              <img src="../../plus.png" alt="" />
-              <div>TEAM ORIENTED</div>
-              <div className='Main--sideBackground'></div>
-            </div>
-            <div className='Main--detail'>
-              <img src="../../plus.png" alt="" />
-              <div>PROBLEM SOLVER</div>
-              <div className='Main--sideBackground'></div>
+          <div className='Main--circle'>
+            <img src="../../my_picture.jpg" alt="" />
+            <div className='Main--talent'>
+              <div className='Main--detail'>
+                  <img src="../../plus.png" alt="" />
+                  <div>ATTENCTION TO DETAIL</div>
+                  <div className='Main--sideBackground'></div>
+                </div>
+                <div className='Main--detail'>
+                  <img src="../../plus.png" alt="" />
+                  <div>TEAM ORIENTED</div>
+                  <div className='Main--sideBackground'></div>
+                </div>
+                <div className='Main--detail'>
+                  <img src="../../plus.png" alt="" />
+                  <div>PROBLEM SOLVER</div>
+                  <div className='Main--sideBackground'></div>
+                </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
