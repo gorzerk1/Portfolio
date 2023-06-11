@@ -323,9 +323,7 @@ span {
 }
 
 @media (max-width:450px) {
-    .Main--leftSide , .Main--rightSide {
-        border:1px solid red;
-    }
+
     .Main--leftSide {
         height:50%;
     }
