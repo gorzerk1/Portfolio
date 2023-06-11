@@ -14,15 +14,16 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Secular One', sans-serif;
-    overflow: hidden;
-    
+    overflow: hidden;  
 }
+
 .Navbar--container {
     width: 65%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
 }
+
 .Navbar--buttons {
     color:white;
     display: flex;
@@ -33,11 +34,45 @@ body {
     font-weight: bolder;
     height: 100%;
     width: 90%;
-    
 }
-.Navbar--buttons > div {
+
+.navbar--link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
     cursor: pointer;
 }
+
+.navbar--link::before,
+.navbar--link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0561EE;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+}
+
+.navbar--link::before {
+    top: -3px;
+    transform-origin: left;
+}
+
+.navbar--link::after {
+    bottom: -3px;
+    transform-origin: right;
+}
+
+.navbar--link:hover::before,
+.navbar--link:hover::after {
+    transform: scaleX(1);
+}
+
 .Navbar--logo {
     width: 10%;
     color:rgb(168, 168, 168);
@@ -64,7 +99,6 @@ body {
         width: 100%;
     }
 }
-
 
 @media (max-width:480px) {
     .Navbar--buttons > :nth-child(2) {

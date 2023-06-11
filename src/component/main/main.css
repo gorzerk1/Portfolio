@@ -253,11 +253,7 @@ span {
         height: 130vh;
     }
 }
-@media (max-height:620px) {
-    .Main--aboutMe {
-        height: 170vh;
-    }
-}
+
 
 @media (max-width:770px) {
     .Main--aboutMe {
@@ -391,11 +387,7 @@ span {
     }
     
 }
-@media (max-height:660px) {
-    .Main--aboutMe {
-        height: 150vh;
-    }
-}
+
 
 @media (max-width:450px) {
 
@@ -405,7 +397,8 @@ span {
     .Main--rightSide {
         height: 60%;
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
+        margin-top:20px;
     }
     .Main--aboutMe {
         min-height: 110vh;
@@ -463,11 +456,7 @@ span {
     
 
 }
-@media (max-height:490px) {
-    .Main--aboutMe {
-        height: 160vh;
-    }
-}
+
 @media (max-width:380px) {
     .Main--leftSide {
         font-size: 1.3rem;
@@ -500,5 +489,28 @@ span {
         color:#6276a5;
         cursor: pointer;
         transition: color 0.5s;
+    }
+}
+@media (max-height:660px) {
+    .Main--aboutMe {
+        height: 140vh;
+    }
+}
+
+@media (max-height:620px) {
+    .Main--aboutMe {
+        height: 170vh;
+    }
+}
+
+@media (max-height:490px) {
+    .Main--aboutMe {
+        height: 160vh;
+    }
+}
+
+@media (max-height:442px) {
+    .Main--aboutMe {
+        height: 200vh;
     }
 }
