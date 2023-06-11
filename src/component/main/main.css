@@ -273,16 +273,16 @@ span {
     }
     .Main--circle {
         position: relative;
-        width: 224px;   /* 280px - 20% */
-        height: 324.8px;  /* 406px - 20% */
+        width: 224px;   
+        height: 324.8px;  
         border: 3.2px solid white; 
         border-radius: 160px; 
     }
     
     .Main--circle > img {
         position: absolute;
-        width: 203.2px;  /* 254px - 20% */
-        height: 295.2px;  /* 369px - 20% */
+        width: 203.2px; 
+        height: 295.2px;
         border-radius: 160px; 
         right:-8px;
         z-index: -1;
@@ -293,8 +293,8 @@ span {
         position: relative;
         z-index: 0;
         background: white;
-        width: 128px;   /* 160px - 20% */
-        height: 41.6px;  /* 52px - 20% */
+        width: 128px;  
+        height: 41.6px; 
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -333,16 +333,16 @@ span {
     }
     .Main--circle {
         position: relative;
-        width: 224px;   /* 280px - 20% */
-        height: 324.8px;  /* 406px - 20% */
+        width: 224px;  
+        height: 324.8px;  
         border: 3.2px solid white; 
         border-radius: 160px; 
     }
     
     .Main--circle > img {
         position: absolute;
-        width: 203.2px;  /* 254px - 20% */
-        height: 295.2px;  /* 369px - 20% */
+        width: 203.2px; 
+        height: 295.2px;
         border-radius: 160px; 
         right:-8px;
         z-index: -1;
@@ -353,8 +353,8 @@ span {
         position: relative;
         z-index: 0;
         background: white;
-        width: 128px;   /* 160px - 20% */
-        height: 41.6px;  /* 52px - 20% */
+        width: 128px;  
+        height: 41.6px; 
         display: flex;
         justify-content: flex-start;
         align-items: center;
