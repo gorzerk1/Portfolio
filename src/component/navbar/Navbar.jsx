@@ -15,7 +15,6 @@ function Navbar() {
           <div>Portfolio</div>
           <div>Contact</div>
         </div>
-
       </div>
     </div>
   );

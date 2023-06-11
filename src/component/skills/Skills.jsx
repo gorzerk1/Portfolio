@@ -41,10 +41,6 @@ function Skills() {
           <img src="../../python.png" alt="" />
           <div>Python</div>
         </div>
-        <div className='skills--box'>
-          <img src="../../git.png" alt="" />
-          <div>Git</div>
-        </div>
       </div>
     </div>
   );

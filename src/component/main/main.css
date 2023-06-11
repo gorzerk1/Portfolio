@@ -8,32 +8,35 @@ body {
 .Main--body {
     position: relative;
     z-index: 2;
-    width: 100%;
+    min-width: 100%;
     min-height: 100vh;
-    overflow: hidden;
     background-image: url('../../../public/square.jpg');
     background-repeat: repeat;
     display: flex;
     justify-content: center;
     font-family: 'Secular One', sans-serif;
+    align-items: stretch;
 }
 
 .Main--aboutMe {
     color:white;
-    width: 65%;
-    height: 100vh;
+    min-width: 65%;
+    min-height: 100vh;
     display: flex;
+    align-items: stretch;
+    transition: min-width 0.5s, min-height 0.5s;
 }
 
 .Main--leftSide {
     width: 50%;
-    height: 100%;
+    max-height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     font-size: 2rem;
     font-weight: bolder;
+    transition: width 0.5s, max-height 0.5s,;
 }
 
 .Main--leftSide > :nth-child(2){
@@ -60,6 +63,7 @@ span {
     background-color: #6276a5;
     border-radius: 5px;
     cursor: pointer;
+    transition: width 0.5s, height 0.5s;
 }
 
 .Main--buttons > :last-child {
@@ -73,7 +77,7 @@ span {
     align-items: center;
     color:#6276a5;
     cursor: pointer;
-    transition: color 0.5s;
+    transition: width 0.5s, height 0.5s color 0.5s;
 }
 
 .Main--buttons > :last-child:hover {
@@ -87,7 +91,8 @@ span {
     justify-content: center;
     align-items: center;
     position: relative;
-
+    transition: width 0.5s, height 0.5s ;
+    
 }
 
 .Main--circle {
@@ -96,6 +101,7 @@ span {
     height: 508px;
     border:4px solid white;
     border-radius: 200px;
+    transition: width 0.5s, height 0.5s;
 }
 
 .Main--circle > img {
@@ -105,6 +111,7 @@ span {
     border-radius: 200px;
     right:-10px;
     z-index: -1;
+    transition: width 0.5s, height 0.5s;
 }
 
 .Main--talent {
@@ -131,7 +138,8 @@ span {
     align-items: center;
     border-radius: 8px;
     color:black;
-    margin-right:20px
+    margin-right:20px;
+    transition: width 0.5s, height 0.5s;
 }
 
 .Main--detail > :nth-child(2) {
@@ -168,16 +176,13 @@ span {
 }
 
 @media (max-width:1170px) {
-    .Main--aboutMe {
-        height: 130vh;
-        flex-direction: column;
-    }
+
     .Main--leftSide > :first-child {
         margin-top:100px
     }
     .Main--leftSide {
         width: 100%;
-        height: 80%;
+        height: 100%;
         justify-content: center;
         align-items: center;
     }
@@ -188,7 +193,72 @@ span {
         justify-content: center;
         align-items: center;
     }
+    .Main--circle {
+        position: relative;
+        width: 280px;
+        height: 406px;
+        border: 3.2px solid white; 
+        border-radius: 160px; 
+    }
+
+    .Main--circle > img {
+        position: absolute;
+        width: 254px; 
+        height: 369px;
+        border-radius: 160px; 
+        right:-8px;
+        z-index: -1;
+        border:1px solid
+    }
+    .Main--detail {
+        position: relative;
+        z-index: 0;
+        background: white;
+        width: 160px;
+        height: 52px; 
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 6.4px; 
+        color:black;
+        margin-right:16px;
+    }
+
+    .Main--detail > :nth-child(2) {
+        width: 50%;
+        z-index: 2;
+        height: 100%;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        margin:0 auto;
+    }
+
+    .Main--detail > img {
+        margin:0 24px 0 12px;
+        width: 20px; 
+        height: 20px; 
+        z-index: 2;
+    }
+
+    
+    
+
 }
+
+
+@media (max-width:1070px) {
+    .Main--aboutMe {
+        flex-direction: column;
+        height: 130vh;
+    }
+}
+@media (max-height:620px) {
+    .Main--aboutMe {
+        height: 170vh;
+    }
+}
+
 @media (max-width:770px) {
     .Main--aboutMe {
         width: 100%;
@@ -321,6 +391,11 @@ span {
     }
     
 }
+@media (max-height:660px) {
+    .Main--aboutMe {
+        height: 150vh;
+    }
+}
 
 @media (max-width:450px) {
 
@@ -333,7 +408,7 @@ span {
         align-items: flex-end;
     }
     .Main--aboutMe {
-        min-height: 120vh;
+        min-height: 110vh;
     }
 
     .Main--circle {
@@ -387,4 +462,43 @@ span {
     }
     
 
+}
+@media (max-height:490px) {
+    .Main--aboutMe {
+        height: 160vh;
+    }
+}
+@media (max-width:380px) {
+    .Main--leftSide {
+        font-size: 1.3rem;
+    }
+    .Main--leftSide > :nth-child(2) {
+        font-size: 3rem;
+    }
+    .Main--buttons > :first-child {
+        width: 120px;
+        height: 40px;
+        font-size: bolder;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #6276a5;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .Main--buttons > :last-child {
+        width: 200px;
+        height: 40px;
+        border:0;
+        font-size: bolder;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#6276a5;
+        cursor: pointer;
+        transition: color 0.5s;
+    }
 }

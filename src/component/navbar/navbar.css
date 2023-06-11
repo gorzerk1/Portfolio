@@ -47,3 +47,27 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
+
+@media (max-width:1028px) {
+    .Navbar--logo {
+        display: none;
+    }
+    .Navbar--buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Navbar--container {
+        width: 100%;
+    }
+    .Navbar--buttons {
+        width: 100%;
+    }
+}
+
+
+@media (max-width:480px) {
+    .Navbar--buttons > :nth-child(2) {
+        display: none;
+    }
+}

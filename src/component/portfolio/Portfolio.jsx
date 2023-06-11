@@ -25,7 +25,7 @@ function Portfolio() {
       const top = containerRef.current.getBoundingClientRect().top;
       if (top <= window.innerHeight * 0.6) {
         setArrowClass('');
-        setVideoClass('');  // Set class to '' so the video flips back to its original state
+        setVideoClass(''); 
       }
     };
 
@@ -54,6 +54,11 @@ function Portfolio() {
               onMouseOut={handleMouseOut}
             />
           </div>
+          <div>
+            asdsad
+          </div>
+          <div>asdasds</div>
+          <div>asdasdasdsadsads</div>
         </div>
       </div>
     </div>

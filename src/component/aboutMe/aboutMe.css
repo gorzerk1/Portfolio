@@ -56,3 +56,45 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1rem;
 }
+
+@media (max-width:1228px) {
+    .aboutMe--Container {
+        width: 80%;
+    }
+}
+
+@media (max-width:850px) {
+    .aboutMe--Container {
+    width: 90%;
+  }
+}
+@media (max-height:666px) {
+    .aboutMe--body {
+     height: 70vh;
+
+    }
+}
+@media (max-width:650px) {
+    .aboutMe--Container > p{
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width:550px) {
+    .aboutMe--Container > p{
+    font-size: 1rem;
+  }
+}
+@media (max-height:545px) {
+    .aboutMe--body {
+     height: 90vh;
+
+    }
+}
+
+@media (max-height:430px) {
+    .aboutMe--body {
+     height: 100vh;
+
+    }
+}
