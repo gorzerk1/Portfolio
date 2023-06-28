@@ -36,7 +36,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .Main--leftSide > :nth-child(2){
@@ -114,7 +114,7 @@ span {
 
 .Main--talent {
     position: absolute;
-    left:150px; 
+    left:150px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -198,15 +198,15 @@ span {
         position: relative;
         width: 280px;
         height: 406px;
-        border: 3.2px solid white; 
-        border-radius: 160px; 
+        border: 3.2px solid white;
+        border-radius: 160px;
     }
 
     .Main--circle > img {
         position: absolute;
-        width: 254px; 
+        width: 254px;
         height: 369px;
-        border-radius: 160px; 
+        border-radius: 160px;
         right:-8px;
         z-index: -1;
         border:1px solid
@@ -216,11 +216,11 @@ span {
         z-index: 0;
         background: white;
         width: 160px;
-        height: 52px; 
+        height: 52px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        border-radius: 6.4px; 
+        border-radius: 6.4px;
         color:black;
         margin-right:16px;
     }
@@ -237,13 +237,13 @@ span {
 
     .Main--detail > img {
         margin:0 24px 0 12px;
-        width: 20px; 
-        height: 20px; 
+        width: 20px;
+        height: 20px;
         z-index: 2;
     }
 
-    
-    
+
+
 
 }
 
@@ -255,7 +255,11 @@ span {
         flex-direction: column;
         height: auto;
     }
-    .Main--leftSide, .Main--rightSide {
+}
+
+
+@media (max-width:770px) {
+    .Main--aboutMe {
         width: 100%;
         min-height: auto;
     }
@@ -264,7 +268,7 @@ span {
 
 @media (max-width:600px) {
 
-    .Main--leftSide { 
+    .Main--leftSide {
         height: auto;
         text-align: center;
         display: flex;
@@ -280,16 +284,16 @@ span {
         position: relative;
         width: 252px;
         height: 365.4px;
-        border: 3.2px solid white; 
-        border-radius: 160px; 
+        border: 3.2px solid white;
+        border-radius: 160px;
         display: flex;
     }
 
     .Main--circle > img {
         position: absolute;
-        width: 228.6px; 
+        width: 228.6px;
         height: 332.1px;
-        border-radius: 160px; 
+        border-radius: 160px;
         right:-8px;
         z-index: -1;
         border:1px solid
@@ -308,11 +312,11 @@ span {
         position: relative;
         width: 201.6px; /* 252px * 0.8 */
         height: 292.32px; /* 365.4px * 0.8 */
-        border: 3.2px solid white; 
+        border: 3.2px solid white;
         border-radius: 128px; /* 160px * 0.8 */
         display: flex;
     }
-    
+
     .Main--circle > img {
         position: absolute;
         width: 182.88px; /* 228.6px * 0.8 */
@@ -322,7 +326,7 @@ span {
         z-index: -1;
         border:1px solid;
     }
-    
+
 }
 @media (max-width:380px) {
     .Main--leftSide > :nth-child(2){
@@ -343,7 +347,7 @@ span {
         border-radius: 5px;
         cursor: pointer;
     }
-    
+
     .Main--buttons > :last-child {
         width: 200px;
         height: 40px;
@@ -365,7 +369,7 @@ span {
         border-radius: 102.4px; /* 128px * 0.8 */
         display: flex;
     }
-    
+
     .Main--circle > img {
         position: absolute;
         width: 146.304px; /* 182.88px * 0.8 */
@@ -375,5 +379,28 @@ span {
         z-index: -1;
         border:1px solid;
     }
-    
+
+}
+@media (max-height:660px) {
+    .Main--aboutMe {
+        height: 140vh;
+    }
+}
+
+@media (max-height:620px) {
+    .Main--aboutMe {
+        height: 170vh;
+    }
+}
+
+@media (max-height:490px) {
+    .Main--aboutMe {
+        height: 160vh;
+    }
+}
+
+@media (max-height:442px) {
+    .Main--aboutMe {
+        height: 200vh;
+    }
 }
