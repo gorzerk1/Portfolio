@@ -24,6 +24,9 @@ function Skills() {
 
   return (
     <div className="skills--body">
+      <div className='skills--title'>
+        <div>What I use</div>
+      </div>
       <div className={`skills-container ${isVisible ? 'animate-back' : ''}`} ref={ref}>
         <div className='skills--box'>
           <img src="../../react.png" alt="" />

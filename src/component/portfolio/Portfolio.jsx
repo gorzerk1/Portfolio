@@ -2,30 +2,14 @@ import React, { useRef, useState, useEffect } from 'react';
 import './portfolio.css';
 
 function Portfolio() {
-  const videoRef = useRef();
-  const [timer, setTimer] = useState(null);
   const containerRef = useRef();
   const [arrowClass, setArrowClass] = useState('arrow-move');
-  const [videoClass, setVideoClass] = useState('flipped');  // Initially set class to 'flipped'
-
-  const handleMouseOver = () => {
-    videoRef.current.play();
-    clearTimeout(timer);
-  };
-
-  const handleMouseOut = () => {
-    videoRef.current.pause();
-    setTimer(setTimeout(() => {
-      videoRef.current.currentTime = 0;
-    }, 60000));
-  };
 
   useEffect(() => {
     const handleScroll = () => {
       const top = containerRef.current.getBoundingClientRect().top;
       if (top <= window.innerHeight * 0.6) {
         setArrowClass('');
-        setVideoClass(''); 
       }
     };
 
@@ -44,21 +28,33 @@ function Portfolio() {
 
         <div className='portfolio--grid'>
           <div>
-            <video 
-              ref={videoRef} 
-              src="../../bikers.mp4" 
-              loop 
-              muted 
-              className={`portfolio-video ${videoClass}`}  // Include the new videoClass
-              onMouseOver={handleMouseOver} 
-              onMouseOut={handleMouseOut}
-            />
+            <img src="../../bikersil.jpg" alt="" />
+            <div className="hover-overlay">
+              <div>Bikersil</div>
+              <div className='hover--image'>
+                <img 
+                  src="../../enter.png" 
+                  alt="" 
+                  onClick={() => window.location.href = 'https://www.bikersil.com'}
+                />
+              </div>
+              <div>CSS/JavaScript/React</div>
+            </div> 
           </div>
           <div>
-            asdsad
+            <img src="../../car_rental.png" alt="" />
+            <div className="hover-overlay">
+              <div>Car Rental</div>
+              <div className='hover--image'>
+                <img 
+                  src="../../enter.png" 
+                  alt="" 
+                  onClick={() => window.location.href = 'https://649b56c7f554ae0008c6e8ce--glowing-churros-d0e1c4.netlify.app/'}
+                />
+              </div>
+              <div>CSS/JavaScript/React</div>
+            </div> 
           </div>
-          <div>asdasds</div>
-          <div>asdasdasdsadsads</div>
         </div>
       </div>
     </div>
@@ -66,4 +62,3 @@ function Portfolio() {
 }
 
 export default Portfolio;
-

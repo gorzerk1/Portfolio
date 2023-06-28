@@ -9,7 +9,7 @@ body {
 
 .portfolio--body {
     width: 100%;
-    min-height: 90vh;
+    min-height:70vh;
     background:white;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@ body {
 
 .portfolio--container {
     position: relative;
-    width: 65%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
 }
@@ -53,21 +53,76 @@ body {
 
 .portfolio--grid {
     position: relative;
-    min-width: 100%;
-    height: 70%;
-    display: grid;
-    grid-template-columns: 50% 50% ;
-    gap:1%;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    gap:5%
+}
+.portfolio--grid > div {
+    width: 400px;
+    height:400px;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
 }
 
-.portfolio-video {
+.portfolio--grid > div > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 2s;
-    backface-visibility: hidden;
+    position: relative; 
+    z-index: 1;
+}
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(22, 129, 216, 0.8);
+    z-index: 2;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.5s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hover-overlay >:nth-child(1) {
+    height:50%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top:20px;
+    font-size: 1.6rem;
+}
+.hover-overlay >:nth-child(2) {
+    height:33%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.hover--image > img {
+    width: 10%;
+    height:auto;
+}
+.hover-overlay >:nth-child(3) {
+    height:33%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
+/* This is the animation on hover */
+.portfolio--grid > div:hover .hover-overlay {
+    transform: scaleY(1);
+}
 .flipped {
     transform: rotateY(180deg);
 }
@@ -99,7 +154,7 @@ body {
 
 @media (max-width:856px) {
 .portfolio--container {
-    width: 60%;
+    width: 100%;
 }
 
 .portfolio--grid {
@@ -109,25 +164,14 @@ body {
     display: grid;
     grid-template-columns: 1fr ;
     gap:5%;
+    place-items: center;
 }
-
 }
-@media (max-width:450px) {
-.portfolio--container {
-    width: 80%;
-}
-
-}
-@media (max-width:375px) {
-.portfolio--container {
-    width: 90%;
-}
-
-}
-
-@media (max-width:375px) {
-.portfolio--container {
-    width: 90%;
-}
-
+@media (max-width:470px) {
+    .portfolio--grid > div {
+        width: 300px;
+        height:300px;
+        box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
 }

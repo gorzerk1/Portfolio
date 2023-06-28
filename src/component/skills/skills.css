@@ -12,13 +12,14 @@ body {
     height: 22vh;
     background: #181e2c;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Secular One', sans-serif;
-    background-image: url("../../../public/tech_image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+    background-color: #032f48;
 }
 
 .skills-container {
@@ -29,7 +30,19 @@ body {
     align-items: center;
     color:white;
 }
-
+.skills--title {
+    height:10vh;
+    color:white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top:15px;
+}
+.skills--title > div {
+    border-bottom:3px solid white;
+    height:46px
+}
 .skills--box {
     width: 7%;
     display: flex;
@@ -97,6 +110,9 @@ body {
 
 }
 @media (max-width:450px) {
+    .skills--body {
+        height: 30vh;
+    }
     .skills-container {
         width: 65%;
         height: 100%;
