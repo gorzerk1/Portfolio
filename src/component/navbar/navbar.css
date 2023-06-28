@@ -8,13 +8,16 @@ body {
 
 .Navbar--body {
     position: absolute;
-    height: 9vh;
+    min-height: 9vh;
     width: 100%;
     z-index: 10;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: 'Secular One', sans-serif;
     overflow: hidden;  
+    background-color:#032f48;
+    border-radius:0 0 5px 5px;
 }
 
 .Navbar--container {
@@ -82,7 +85,6 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
-
 @media (max-width:1028px) {
     .Navbar--logo {
         display: none;

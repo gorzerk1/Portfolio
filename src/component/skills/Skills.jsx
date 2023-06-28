@@ -1,49 +1,55 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useSpring, animated } from 'react-spring';
 import './skills.css';
 
 function Skills() {
-  const ref = useRef();
-  const [isVisible, setIsVisible] = useState(false);
-  const [isAnimated, setIsAnimated] = useState(false);
+  const [refReact, inViewReact] = useInView({ triggerOnce: true });
+  const [refJavaScript, inViewJavaScript] = useInView({ triggerOnce: true });
+  const [refCSS, inViewCSS] = useInView({ triggerOnce: true });  // Changed here
+  const [refPython, inViewPython] = useInView({ triggerOnce: true });
 
-  const checkVisibility = useCallback(() => {
-    const rect = ref.current.getBoundingClientRect();
-    const isVisible = rect.top <= window.innerHeight * 0.6;
-    if(isVisible && !isAnimated) {
-      setIsVisible(true);
-      setIsAnimated(true);
-    }
-  }, [isAnimated]);
+  const animationReact = useSpring({
+    transform: inViewReact ? 'scale(1)' : 'scale(0.01)',
+    config: { duration: 500 },
+  });
 
-  useEffect(() => {
-    window.addEventListener('scroll', checkVisibility);
-    return () => {
-      window.removeEventListener('scroll', checkVisibility);
-    };
-  }, [checkVisibility]);
+  const animationJavaScript = useSpring({
+    transform: inViewJavaScript ? 'scale(1)' : 'scale(0.01)',
+    config: { duration: 500 },
+  });
+
+  const animationCSS = useSpring({  // Changed here
+    transform: inViewCSS ? 'scale(1)' : 'scale(0.01)',  // Changed here
+    config: { duration: 500 },
+  });
+
+  const animationPython = useSpring({
+    transform: inViewPython ? 'scale(1)' : 'scale(0.01)',
+    config: { duration: 500 },
+  });
 
   return (
     <div className="skills--body">
       <div className='skills--title'>
         <div>What I use</div>
       </div>
-      <div className={`skills-container ${isVisible ? 'animate-back' : ''}`} ref={ref}>
-        <div className='skills--box'>
+      <div className={`skills-container`}>
+        <animated.div ref={refReact} className='skills--box' style={animationReact}>
           <img src="../../react.png" alt="" />
           <div>React</div>
-        </div>
-        <div className='skills--box'> 
+        </animated.div>
+        <animated.div ref={refJavaScript} className='skills--box' style={animationJavaScript}> 
           <img src="../../javaScript.png" alt="" />
           <div>JavaScript</div>
-        </div>
-        <div className='skills--box'>
-          <img src="../../aws.png" alt="" />
-          <div>AWS</div>
-        </div>
-        <div className='skills--box'>
+        </animated.div>
+        <animated.div ref={refCSS} className='skills--box' style={animationCSS}>
+          <img src="../../css.png" alt="" /> 
+          <div>CSS</div>
+        </animated.div>
+        <animated.div ref={refPython} className='skills--box' style={animationPython}>
           <img src="../../python.png" alt="" />
           <div>Python</div>
-        </div>
+        </animated.div>
       </div>
     </div>
   );

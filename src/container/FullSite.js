@@ -11,7 +11,7 @@ function FullSite() {
   const aboutMeRef = useRef(null);
   const portfolioRef = useRef(null);
   const footerRef = useRef(null);
-  
+
   return (
     <>
       <Navbar mainRef={mainRef} aboutMeRef={aboutMeRef} portfolioRef={portfolioRef} footerRef={footerRef}/>

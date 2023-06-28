@@ -193,6 +193,7 @@ span {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding:15px 0;
     }
     .Main--circle {
         position: relative;
@@ -329,6 +330,7 @@ span {
 
 }
 @media (max-width:380px) {
+
     .Main--leftSide > :nth-child(2){
         font-size: 1.3rem;
     }

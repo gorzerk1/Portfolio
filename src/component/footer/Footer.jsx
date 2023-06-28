@@ -1,37 +1,32 @@
-import { useEffect, useRef, useState } from 'react';
+import React from 'react';
+import { useSpring, animated } from 'react-spring';
+import { useInView } from 'react-intersection-observer';
 import './footer.css';
 
 function Footer() {
-  const ref = useRef();
-  const [isVisible, setIsVisible] = useState(true);
+  const [ref, inView] = useInView({
+    triggerOnce: true, // The animation will run only once
+  });
 
-  const checkVisibility = () => {
-    const rect = ref.current.getBoundingClientRect();
-    if (rect.bottom < window.innerHeight) {
-      setIsVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    checkVisibility();
-    window.addEventListener('scroll', checkVisibility);
-    return () => {
-      window.removeEventListener('scroll', checkVisibility);
-    };
-  }, []);
+  // Define the animation
+  const animationProps = useSpring({
+    from: { transform: inView ? 'scale(0.01)' : 'scale(1)' },
+    to: { transform: 'scale(1)' },
+    config: { duration: 1000 },
+  });
 
   return (
     <div className="footer--body">
-      <div className={`footer--container ${isVisible ? '' : 'animate-back'}`} ref={ref}>
-        <a href="https://github.com/gorzerk1" target="_blank" rel="noopener noreferrer">
+      <div className={`footer--container`}>
+        <animated.a ref={ref} style={animationProps} href="https://github.com/gorzerk1" target="_blank" rel="noopener noreferrer">
           <img src="../../github.png" alt="github" />
-        </a>
-        <a href="https://www.linkedin.com/in/dima-dubinin-7b7494251/" target="_blank" rel="noopener noreferrer">
+        </animated.a>
+        <animated.a ref={ref} style={animationProps} href="https://www.linkedin.com/in/dima-dubinin-7b7494251/" target="_blank" rel="noopener noreferrer">
           <img src="../../linkedin.png" alt="linkedin" />
-        </a>
-        <a href="mailto:drakingin@gmail.com">
+        </animated.a>
+        <animated.a ref={ref} style={animationProps} href="mailto:drakingin@gmail.com">
           <img src="../../email.png" alt="email" />
-        </a>
+        </animated.a>
       </div>
       <div className='footer--rights'>
         All rights reserved © 2023 Dima Dubinin
