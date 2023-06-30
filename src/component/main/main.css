@@ -55,7 +55,7 @@ span {
 .Main--buttons > :first-child {
     width: 150px;
     height: 50px;
-    font-size: bolder;
+    font-weight: bolder;
     font-size: 1rem;
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ span {
     width: 200px;
     height: 50px;
     border:0;
-    font-size: bolder;
+    font-weight: bolder;
     font-size: 1.1rem;
     display: flex;
     justify-content: center;
@@ -342,7 +342,6 @@ span {
     .Main--buttons > :first-child {
         width: 120px;
         height: 40px;
-        font-size: bolder;
         font-size: 0.9rem;
         display: flex;
         justify-content: center;
@@ -356,7 +355,6 @@ span {
         width: 200px;
         height: 40px;
         border:0;
-        font-size: bolder;
         font-size: 1rem;
         display: flex;
         justify-content: center;
