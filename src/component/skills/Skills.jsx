@@ -30,9 +30,6 @@ function Skills() {
 
   return (
     <div className="skills--body">
-      <div className='skills--title'>
-        <div>What I use</div>
-      </div>
       <div className={`skills-container`}>
         <animated.div ref={refReact} className='skills--box' style={animationReact}>
           <img src="../../react.png" alt="" />

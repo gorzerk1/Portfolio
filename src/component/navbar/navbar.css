@@ -7,7 +7,8 @@ body {
 }
 
 .Navbar--body {
-    position: absolute;
+    position: fixed; /* Change position to fixed */
+    top: 0; /* Position at the top */
     min-height: 9vh;
     width: 100%;
     z-index: 10;
@@ -16,15 +17,24 @@ body {
     align-items: center;
     font-family: 'Secular One', sans-serif;
     overflow: hidden;  
-    background-color:#032f48;
     border-radius:0 0 5px 5px;
+    transition: background-color 0.5s; /* Add transition property */
+    background-color: transparent; /* Set initial background color to transparent */
 }
 
+.Navbar--body.scrolled {
+    transform: translateY(100%); /* Move the navbar from top to bottom */
+}
+
+.Navbar--background {
+    background-color: #032f48;
+}
 .Navbar--container {
     width: 65%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
+    position: relative;
 }
 
 .Navbar--buttons {
@@ -77,13 +87,16 @@ body {
 }
 
 .Navbar--logo {
-    width: 10%;
-    color:rgb(168, 168, 168);
+    width: 40%;
+    color:white;
     font-size: 1.4rem;
     font-weight:lighter;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.navbar--menu {
+    display: none;
 }
 @media (max-width:1028px) {
     .Navbar--logo {
@@ -102,8 +115,65 @@ body {
     }
 }
 
-@media (max-width:480px) {
-    .Navbar--buttons > :nth-child(2) {
+@media (max-width:570px) {
+    .Navbar--body{
+        overflow:visible;
+    }
+    .navbar--menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding:0 30px;
+        width: 100%;
+        min-height: 9vh
+    }
+    .navbar--menu >img {
+        width: 40px;
+        height: 40px;
+    }
+    .navbar--link {
         display: none;
     }
+    .Navbar--logo {
+        display: flex;
+        justify-content: center;
+        min-width: 250px;
+    }
+    .navbar--menuScreen {
+        position: absolute;
+        background-color: white;
+        height:101vh;
+        width: 100%;
+        top:-25px;
+        right: -100%; /* Start from rightmost side */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.5s ease; /* Transition effect */
+        opacity: 0;
+    }
+    .navbar--menuScreen.show {
+        right: 0; /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+    .navbar--insideMenu {
+        height:100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+    .navbar--arrow {
+        position: absolute;
+        top:40px;
+        left:20px;
+    }
+    .navbar--arrow > img {
+        width: 50px;
+        height:50px
+    }
+    
 }

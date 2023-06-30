@@ -16,7 +16,7 @@ function Main() {
         </div>
         <div className='Main--rightSide'>
           <div className='Main--circle'>
-            <img src="../../my_picture.jpg" alt="" />
+            <img src="" alt="" />
             <div className='Main--talent'>
               <div className='Main--detail'>
                   <img src="../../plus.png" alt="" />

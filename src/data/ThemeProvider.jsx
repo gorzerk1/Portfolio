@@ -4,7 +4,7 @@ const MyContext = React.createContext();
 
 function ThemeProvider({ children }) {
   const [imageKey, setImageKey] = useState(null);
-
+  console.log(imageKey)
   return (
       <MyContext.Provider
       value={{

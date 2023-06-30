@@ -32,15 +32,6 @@ body {
     color:white;
     transition: width 0.5s;
 }
-.skills--title {
-    min-height:10vh;
-    color:white;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top:15px;
-}
 .skills--title > div {
     border-bottom:3px solid white;
     height:46px
