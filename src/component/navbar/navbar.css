@@ -85,7 +85,9 @@ body {
 .navbar--link:hover::after {
     transform: scaleX(1);
 }
-
+.navbar--insideMenu {
+    display: none;
+}
 .Navbar--logo {
     width: 40%;
     color:white;
