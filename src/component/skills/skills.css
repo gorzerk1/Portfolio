@@ -11,7 +11,6 @@ body {
     width: 100%;
     height:auto;
     min-height: 22vh;
-    background: #181e2c;
     display: flex;
     flex-direction: column;
     align-items: center;

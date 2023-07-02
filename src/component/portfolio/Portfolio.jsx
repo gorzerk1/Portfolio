@@ -42,13 +42,10 @@ function Portfolio() {
             <div className="hover-overlay">
               <div>Bikersil</div>
               <div className='hover--image'>
-                <img 
-                  src="../../enter.png" 
-                  alt="" 
-                  onClick={() => window.location.href = 'https://www.bikersil.com'}
-                />
+                <a href='https://bikersil.com/'>LIVE</a>
+                <a href='https://github.com/gorzerk1/bikerfamily'>GitHub</a>
               </div>
-              <div>CSS/JavaScript/React</div>
+              <div>CSS / JavaScript / React</div>
             </div> 
           </animated.div>
           <animated.div ref={ref2} style={animationProps2}>
@@ -56,13 +53,10 @@ function Portfolio() {
             <div className="hover-overlay">
               <div>Car Rental</div>
               <div className='hover--image'>
-                <img 
-                  src="../../enter.png" 
-                  alt="" 
-                  onClick={() => window.location.href = 'https://649b56c7f554ae0008c6e8ce--glowing-churros-d0e1c4.netlify.app/'}
-                />
+                <a href='https://649f21843e888400082df9a0--heartfelt-starlight-7c0c38.netlify.app'>LIVE</a>
+                <a href='https://github.com/gorzerk1/e-cars'>GitHub</a>
               </div>
-              <div>CSS/JavaScript/React</div>
+              <div>CSS / JavaScript / React</div>
             </div> 
           </animated.div>
         </div>
