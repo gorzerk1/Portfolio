@@ -24,7 +24,7 @@ function Footer() {
         <animated.a ref={ref} style={animationProps} href="https://www.linkedin.com/in/dima-dubinin-7b7494251/" target="_blank" rel="noopener noreferrer">
           <img src="../../linkedin.png" alt="linkedin" />
         </animated.a>
-        <animated.a ref={ref} style={animationProps} href="mailto:drakingin@gmail.com">
+        <animated.a ref={ref} style={animationProps} href="mailto:dimadubinin292@gmail.com">
           <img src="../../email.png" alt="email" />
         </animated.a>
       </div>

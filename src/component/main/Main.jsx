@@ -1,6 +1,11 @@
+import React from 'react';
 import './main.css';
 
-function Main() {
+function Main({ portfolioRef, footerRef }) {
+
+  const scrollTo = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }
 
   return (
     <div className="Main--body">
@@ -10,13 +15,13 @@ function Main() {
           <div>Dubinin <span>Dima</span></div>
           <div>A Web Developer</div>
           <div className='Main--buttons'>
-            <div>HIRE ME</div>
-            <div>VIEW MY PORTFOLIO</div>
+            <div onClick={() => scrollTo(footerRef)}>HIRE ME</div>
+            <div onClick={() => scrollTo(portfolioRef)}>VIEW MY PORTFOLIO</div>
           </div>
         </div>
         <div className='Main--rightSide'>
           <div className='Main--circle'>
-            <img src="" alt="" />
+            <img src="../../my_picture.jpg" alt="" />
             <div className='Main--talent'>
               <div className='Main--detail'>
                   <img src="../../plus.png" alt="" />

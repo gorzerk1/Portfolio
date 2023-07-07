@@ -44,7 +44,7 @@ function FullSite() {
   return (
     <>
       <Navbar mainRef={mainRef} aboutMeRef={aboutMeRef} portfolioRef={portfolioRef} footerRef={footerRef}/>
-      <div ref={mainRef}><Main/></div>
+      <div ref={mainRef}><Main portfolioRef={portfolioRef} footerRef={footerRef}/></div>
       <div ref={aboutMeRef}><AboutMe/></div>
       <Skills/>
       <div ref={portfolioRef}><Portfolio/></div>

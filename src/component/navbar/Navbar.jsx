@@ -25,7 +25,7 @@ function Navbar({ mainRef, aboutMeRef, portfolioRef, footerRef }) {
   }, []);
 
   function scrollTo(ref) {
-    ref.current.scrollIntoView({ behavior: 'smooth' });
+    ref.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
 
   return (
