@@ -1,17 +1,17 @@
 import React, { useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer'; // Import react-intersection-observer
+import { useInView } from 'react-intersection-observer';
 import './portfolio.css';
 
 function Portfolio() {
   const containerRef = useRef();
 
   const [ref1, inView1] = useInView({
-    triggerOnce: true, // The animation will run only once
+    triggerOnce: true, 
   });
 
   const [ref2, inView2] = useInView({
-    triggerOnce: true, // The animation will run only once
+    triggerOnce: true, 
   });
 
   // Define the animation
