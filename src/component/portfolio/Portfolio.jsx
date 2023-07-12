@@ -53,7 +53,7 @@ function Portfolio() {
             <div className="hover-overlay">
               <div>Car Rental</div>
               <div className='hover--image'>
-                <a href='https://64a7b42c767f6900085bbdb3--glowing-churros-d0e1c4.netlify.app/'>LIVE</a>
+                <a href='https://64ae2c666ce2470008ccbe93--glowing-churros-d0e1c4.netlify.app/'>LIVE</a>
                 <a href='https://github.com/gorzerk1/e-cars'>GitHub</a>
               </div>
               <div>CSS / JavaScript / React</div>
